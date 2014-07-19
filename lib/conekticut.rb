@@ -1,4 +1,8 @@
 # encoding: utf-8
+require "base64"
+require "rest_client"
+require 'httparty'
+require "multi_json"
 require 'active_support/concern'
 
 module Conekticut
@@ -18,6 +22,7 @@ end
 require "conekticut/version"
 require "conekticut/client"
 require "conekticut/sslcert"
+require "conekticut/client/configuration"
 require "conekticut/client/payment"
 require "conekticut/client/tokenizer"
 require "conekticut/client/card"

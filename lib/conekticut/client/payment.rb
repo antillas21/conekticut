@@ -1,8 +1,3 @@
-require "base64"
-require "rest_client"
-require "multi_json"
-require "conekticut/client/configuration"
-
 module Conekticut
   module Client
     class Payment

@@ -1,7 +1,3 @@
-require "base64"
-require 'httparty'
-require "conekticut/client/configuration"
-
 module Conekticut
   module Client
     class Tokenizer

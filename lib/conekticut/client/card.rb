@@ -7,6 +7,7 @@ module Conekticut
         super(attrs)
         @address = attrs.fetch(:address, {})
       end
+
       def name
         [first_name, last_name].compact.join(' ')
       end

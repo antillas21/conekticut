@@ -4,7 +4,6 @@ describe Conekticut::Client::Tokenizer do
   before :each do
     Conekticut.configure do |c|
       c.public_key = "key_Gvwcf8Zj2B4L24PRtBpgzrA"
-      c.private_key = "1tv5yJp3xnVZ7eK67m4h"
       c.ssl_cert_path = "spec/factories/ssl_cert.crt"
       c.api_version = '0.3.0'
       @payments_status_list = ["paid", "pending_payment"]

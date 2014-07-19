@@ -24,7 +24,7 @@ describe Conekticut::Client::Tokenizer do
 
   describe '.tokenize_card' do
     let(:card_attrs) { {
-      number: '4242424242424242', first_name: 'John', last_name: 'Doe',
+      number: '4242424242424242', name: 'John Doe',
       brand: 'visa', cvc: '123', month: '10', year: '2015'
      } }
     let(:card) { Conekticut::Client::Card.new(card_attrs) }

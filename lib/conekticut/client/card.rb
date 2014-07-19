@@ -1,23 +1,24 @@
 module Conekticut
   module Client
-    require 'ostruct'
+    class Card
+      attr_accessor :name, :cvc, :brand, :device_fingerprint
 
-    class Card < OpenStruct
-      def initialize(attrs)
-        super(attrs)
-        @address = attrs.fetch(:address, {})
-      end
-
-      def name
-        [first_name, last_name].compact.join(' ')
+      def initialize(attrs = {})
+        @name = attrs.fetch(:name)
+        @number = attrs.fetch(:number)
+        @cvc = attrs.fetch(:cvc)
+        @brand = attrs.fetch(:brand)
+        @month = attrs.fetch(:month)
+        @year = attrs.fetch(:year)
+        @device_fingerprint = nil
       end
 
       def display_expiration_date
-        [month, year].compact.join('/')
+        [@month, @year].compact.join('/')
       end
 
       def display_number
-        mask(number)
+        mask(@number)
       end
 
       def billing_address
@@ -25,13 +26,13 @@ module Conekticut
       end
 
       def expiration_date
-        ExpiryDate.new(month, year)
+        ExpiryDate.new(@month, @year)
       end
 
       def to_hash
         { card: {
-            name: name, number: number, brand: brand, cvc: cvc,
-            exp_month: month, exp_year: year,
+            name: name, number: @number, brand: brand, cvc: cvc,
+            exp_month: @month, exp_year: @year,
             device_fingerprint: device_fingerprint
           }
         }
@@ -46,13 +47,6 @@ module Conekticut
       def mask(number)
         last_digits = number[-4..-1]
         ['XXXX-XXXX-XXXX-', last_digits].join
-      end
-
-      def default_billing_address
-        {
-          street1: nil, street2: nil, city: nil,
-          state: nil, zip: nil, country: nil
-        }
       end
 
       class ExpiryDate

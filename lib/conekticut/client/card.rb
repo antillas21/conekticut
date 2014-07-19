@@ -28,10 +28,11 @@ module Conekticut
       end
 
       def to_hash
-        {
-          name: name, number: number, brand: brand, cvc: cvc,
-          exp_month: month, exp_year: year,
-          device_fingerprint: device_fingerprint
+        { card: {
+            name: name, number: number, brand: brand, cvc: cvc,
+            exp_month: month, exp_year: year,
+            device_fingerprint: device_fingerprint
+          }
         }
       end
 

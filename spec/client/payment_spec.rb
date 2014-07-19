@@ -28,20 +28,7 @@ describe Conekticut::Client::Payment do
             "amount"=> 20000,
             "description"=>"Stogies",
             "reference_id"=>"9839-wolf_pack",
-            "card"=> {
-              "number"=> 4111111111111111,
-              "name"=>"Thomas Logan",
-              "exp_month"=> 12,
-              "exp_year"=> 2015,
-              "cvc"=> 666,
-              "address"=> {
-                "street1"=>"250 Alexis St",
-                "city"=>"Red Deer",
-                "state"=>"Alberta",
-                "country"=>"Canada",
-                "zip"=>"T4N 0B8"
-              }
-            }
+            "card" => "tok_test_visa_4242"
           }
 
           response = Conekticut::Client::Payment.create("charges", payment_info)

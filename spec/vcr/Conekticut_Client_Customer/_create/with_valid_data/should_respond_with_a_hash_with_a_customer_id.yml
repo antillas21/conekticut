@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://key_NYiwaF9BTknLXXes9uFcnxQ:@api.conekta.io/customers
+    body:
+      encoding: UTF-8
+      string: name=James%20Howlett&email=example%40mail.guru.ninja&phone=55-5555-5555&cards[]=tok_8kZwafM8IcN23Nd9&plan=gold-plan
+    headers:
+      Accept:
+      - application/vnd.conekta-v0.3.0+json
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Cache-Control:
+      - no-cache
+      Conekta-Media-Type:
+      - conekta-v0.3.0; format=json
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Thu, 31 Jul 2014 21:13:42 GMT
+      Server:
+      - nginx/1.1.19
+      Status:
+      - 404 Not Found
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      X-Request-Id:
+      - 953d0eeb33c05b08a759ac24f1976223
+      X-Runtime:
+      - '0.184142'
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"object":"error","type":null,"message":"Object tok_8kZwafM8IcN23Nd9
+        could not be found.","message_to_purchaser":"El recurso no ha sido encontrado.","param":null,"code":null}'
+    http_version: 
+  recorded_at: Thu, 31 Jul 2014 21:12:48 GMT
+recorded_with: VCR 2.9.2

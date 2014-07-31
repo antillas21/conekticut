@@ -24,7 +24,7 @@ Conekticut can be configured in a rails initializer like so:
 ```ruby
   Conekticut.configure do |c|
     c.public_key = "<your_conekta_public_api_key>"
-    c.private_key = "<your_conekta_public_api_key>"
+    c.private_key = "<your_conekta_private_api_key>"
     c.use_ssl = true
     c.ssl_cert_path = "<your_ssl_cert_path>"
   end

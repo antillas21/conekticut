@@ -3,8 +3,8 @@ module Conekticut
     class Customer
       def self.create(customer = {})
         headers = {
-          "accept" => "application/vnd.conekta-v#{ Base.api_version }+json",
-          "authorization" => "Basic #{::Base64.encode64("#{Base.public_key}:")}",
+          "Accept" => "application/vnd.conekta-v#{ Base.api_version }+json",
+          "Authorization" => "Basic #{::Base64.encode64(Base.private_key)}"
         }
 
         response = HTTParty.post(

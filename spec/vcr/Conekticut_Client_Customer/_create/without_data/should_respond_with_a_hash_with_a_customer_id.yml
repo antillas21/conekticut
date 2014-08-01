@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://key_NYiwaF9BTknLXXes9uFcnxQ:@api.conekta.io/customers
+    uri: https://key_2oZcyz6PhX2hC3SW5to53Q@api.conekta.io/customers
     body:
       encoding: US-ASCII
       string: ''
@@ -11,36 +11,36 @@ http_interactions:
       - application/vnd.conekta-v0.3.0+json
   response:
     status:
-      code: 401
-      message: Unauthorized
+      code: 200
+      message: OK
     headers:
       Cache-Control:
-      - no-cache
+      - max-age=0, private, must-revalidate
       Conekta-Media-Type:
       - conekta-v0.3.0; format=json
       Content-Type:
       - application/json; charset=utf-8
       Date:
-      - Thu, 31 Jul 2014 21:13:41 GMT
+      - Fri, 01 Aug 2014 05:47:57 GMT
+      Etag:
+      - '"821340aec233b17e0ea6cb97dc4d5f92"'
       Server:
       - nginx/1.1.19
       Status:
-      - 401 Unauthorized
+      - 200 OK
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains
       X-Request-Id:
-      - c1c9ce3d3591d4f66efddfd3d7827a14
+      - 2d91baee229db259db5cbe9e174f64f9
       X-Runtime:
-      - '0.067119'
+      - '0.085551'
       Content-Length:
-      - '191'
+      - '183'
       Connection:
       - keep-alive
     body:
       encoding: UTF-8
-      string: '{"object":"error","type":null,"message":"Unauthorized access, please
-        check the permissions of your key for this call.","message_to_purchaser":"Acceso
-        no autorizado.","param":null,"code":null}'
+      string: '{"id":"cus_ABsdRJtEH3kuKqZKC","email":null,"name":null,"phone":null,"livemode":false,"default_card_id":null,"object":"customer","created_at":1406872077,"cards":[],"subscription":null}'
     http_version: 
-  recorded_at: Thu, 31 Jul 2014 21:12:47 GMT
+  recorded_at: Fri, 01 Aug 2014 05:47:06 GMT
 recorded_with: VCR 2.9.2

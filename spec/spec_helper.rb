@@ -3,6 +3,7 @@
 # Require this file using `require "spec_helper"` to ensure that it is only
 # loaded once.
 require "conekticut"
+require 'pry'
 require "vcr"
 
 # Load files from support directory
